@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background-color: rgb(39, 38, 38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#frame {
+    background-color: rgb(44, 44, 44);
+    width: 400px;
+    height: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#head {
+    background-color: rgb(165, 141, 5);
+    color: white;
+    text-align: left;
+    font-size: xx-large;
+    font-style: italic;
+    padding: 20px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    display: flex;
+    align-items: center;
+}
+
+#robo {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+#chatbox {
+    background-color: #a6a6a634;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.user {
+    background-color: rgb(198, 198, 198); 
+    color: black;
+    align-self: flex-end; 
+}
+
+.bot {
+    background-color: rgb(165, 141, 5); 
+    color: white;
+    align-self: flex-start;
+}
+
+#inputArea {
+    display: flex;
+    justify-content: space-between;
+}
+
+#userInput {
+    width: 85%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#sendBtn {
+    background-color: rgb(165, 141, 5);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#sendBtn:hover {
+    background-color: rgb(132, 132, 132);
+}
+
+
+@media (max-width: 600px) {
+
+    #frame {
+        width: 100%; 
+        height: 600px; 
+        margin: 0;
+    }
+
+    #head {
+        font-size: 1.2rem;
+    }
+
+    #chatContainer {
+        padding: 8px;
+    }
+
+    #userMessage {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    #sendBtn {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+}
+
+/* tablets and larger screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #frame {
+        width: 90%;
+        height: 75vh;
+    }
+
+    #head {
+        font-size: 1.4rem;
+    }
+
+    #userMessage {
+        font-size: 1.2rem;
+    }
+
+    #sendBtn {
+        font-size: 1.4rem;
+    }
+}
